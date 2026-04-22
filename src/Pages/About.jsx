@@ -103,7 +103,7 @@ const AboutPage = () => {
           </h2>
           <p className="text-gray-400 mt-2 flex items-center justify-center gap-2">
             <GraduationCap className="w-5 h-5 text-indigo-400" />
-            E-Portfolio 1: Fondasi Dasar Karakter Guru Profesional
+            Fondasi Dasar Karakter Guru Profesional
           </p>
         </div>
 
