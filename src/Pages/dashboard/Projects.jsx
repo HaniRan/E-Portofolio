@@ -77,25 +77,25 @@ const ProjectCard = ({ project, onDelete, onEdit }) => {
   return (
     <Card>
       <div className="p-4 flex flex-col h-full">
-        {project.Img && (
+        {project.img && (
           <div className="w-full aspect-[16/8] rounded-xl mb-4 border border-white/8 overflow-hidden bg-white/5">
             {!imgLoaded && (
               <div className="w-full h-full animate-pulse bg-white/5" />
             )}
             <img
-              src={project.Img}
-              alt={project.Title}
+              src={project.img}
+              alt={project.title}
               onLoad={() => setImgLoaded(true)}
               className={`w-full h-full object-cover transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0 absolute"}`}
             />
           </div>
         )}
         <h3 className="font-semibold text-white text-sm mb-1">
-          {project.Title}
+          {project.title}
         </h3>
-        {project.Description && (
+        {project.description && (
           <p className="text-gray-400 text-xs mb-3 line-clamp-2 leading-relaxed">
-            {project.Description}
+            {project.description}
           </p>
         )}
         {project.TechStack?.length > 0 && (
@@ -362,30 +362,38 @@ export default function Projects() {
   };
 
   const handleCreate = async (form, file) => {
-    setUploading(true);
+  setUploading(true);
+  try {
     let imgUrl = "";
     if (file) imgUrl = await uploadImage(file);
-    await supabase.from("projects").insert({
-      Title: form.Title,
-      Description: form.Description,
-      Img: imgUrl,
-      TechStack: form.TechStack.split(",")
+
+    // PASTI KAN NAMA KOLOM DI SINI HURUF KECIL (title, description, img, dll)
+    const { error } = await supabase.from("projects").insert({
+      title: form.Title,        // Menyesuaikan ke kolom database 'title'
+      description: form.Description, // Menyesuaikan ke kolom database 'description'
+      img: imgUrl,               // Menyesuaikan ke kolom database 'img'
+      tech_stack: form.TechStack.split(",")
         .map((s) => s.trim())
-        .filter(Boolean),
-      Features: form.Features.split(",")
-        .map((s) => s.trim())
-        .filter(Boolean),
-      Link: form.Link,
-      Github: form.Github,
+        .filter(Boolean),       // Menyesuaikan ke kolom database 'tech_stack'
+      link: form.Link,
+      github: form.Github,
     });
+
+    if (error) throw error;
+
     setShowCreate(false);
-    setUploading(false);
     fetchProjects();
-  };
+  } catch (error) {
+    console.error("Error saving project:", error.message);
+    alert("Gagal menyimpan: " + error.message);
+  } finally {
+    setUploading(false);
+  }
+};
 
   const handleEdit = async (form, file) => {
     setUploading(true);
-    let imgUrl = editProject.Img || "";
+    let imgUrl = editProject.img || "";
     if (file) imgUrl = await uploadImage(file);
     await supabase
       .from("projects")

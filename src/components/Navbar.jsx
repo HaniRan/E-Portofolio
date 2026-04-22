@@ -67,13 +67,13 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-                isOpen
-                    ? "bg-[#030014]"
-                    : scrolled
-                    ? "bg-[#030014]/50 backdrop-blur-xl"
-                    : "bg-transparent"
-            }`}
+            className={`fixed w-full top-0 left-0 transition-all duration-500 ${
+        isOpen
+            ? "bg-[#030014] z-[9999]" 
+            : scrolled
+            ? "bg-[#030014]/70 backdrop-blur-xl border-b border-white/10 z-[9999]"
+            : "bg-transparent z-[9999]"
+    }`}
         >
             <div className="mx-auto px-[5%] sm:px-[5%] lg:px-[10%]">
                 <div className="flex items-center justify-between h-16">
@@ -84,7 +84,7 @@ const Navbar = () => {
                             onClick={(e) => scrollToSection(e, "#Home")}
                             className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent"
                         >
-                            Ekizr
+                            E-Portofolio UTS PPL
                         </a>
                     </div>
         

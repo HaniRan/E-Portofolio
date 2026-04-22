@@ -50,9 +50,9 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLiveDemo}
-                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                  className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
                 >
-                  <span className="text-sm font-medium">Live Demo</span>
+                  <span className="text-sm font-medium">Lihat Dokumen</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               ) : (
@@ -61,20 +61,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                 </span>
               )}
 
-              {id ? (
-                <Link
-                  to={`/project/${toSlug(Title)}`}
-                  onClick={handleDetails}
-                  className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                >
-                  <span className="text-sm font-medium">Details</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              ) : (
-                <span className="text-gray-500 text-sm">
-                  Details Not Available
-                </span>
-              )}
+            
             </div>
           </div>
 

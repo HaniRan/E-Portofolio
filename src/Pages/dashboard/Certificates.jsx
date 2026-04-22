@@ -32,11 +32,11 @@ const CertCard = ({ cert, onDelete }) => {
           <div className="w-full aspect-[16/11.5] bg-white/5 animate-pulse" />
         )}
         <img
-          src={cert.Img}
-          alt="Certificate"
-          onLoad={() => setImgLoaded(true)}
-          className={`w-full aspect-[16/11.5] object-cover group-hover:scale-105 transition-transform duration-500 ${imgLoaded ? 'block' : 'hidden'}`}
-        />
+      src={cert.img} // GANTI: dari cert.Img ke cert.img
+      alt="Certificate"
+      onLoad={() => setImgLoaded(true)}
+      className={`w-full aspect-[16/11.5] object-cover group-hover:scale-105 transition-transform duration-500 ${imgLoaded ? 'block' : 'hidden'}`}
+    />
         {imgLoaded && (
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
             <button
@@ -75,16 +75,21 @@ export default function Certificates() {
     setPreview(URL.createObjectURL(f))
   }
 
-  const uploadImage = async () => {
-    if (!file) return
-    setUploading(true)
-    const fileName = `cert-${Date.now()}-${file.name}`
-    await supabase.storage.from('certificate-images').upload(fileName, file)
-    const { data } = supabase.storage.from('certificate-images').getPublicUrl(fileName)
-    await supabase.from('certificates').insert({ Img: data.publicUrl })
-    setFile(null); setPreview(null); setUploading(false)
-    fetchCerts()
-  }
+  // --- Di dalam fungsi uploadImage ---
+const uploadImage = async () => {
+  if (!file) return
+  setUploading(true)
+  const fileName = `cert-${Date.now()}-${file.name}`
+  await supabase.storage.from('certificate-images').upload(fileName, file)
+  const { data } = supabase.storage.from('certificate-images').getPublicUrl(fileName)
+  
+  // GANTI: Gunakan 'img' (huruf kecil) sesuai kolom database
+  await supabase.from('certificates').insert({ img: data.publicUrl }) 
+  
+  setFile(null); setPreview(null); setUploading(false)
+  fetchCerts()
+}
+
 
   const deleteCert = async (id) => {
     if (!confirm('Delete this certificate?')) return
@@ -114,7 +119,7 @@ export default function Certificates() {
       <Card>
         <div className="p-5 sm:p-6 space-y-4">
           <h2 className="text-sm font-semibold text-white flex items-center gap-2">
-            <Plus className="w-4 h-4 text-indigo-400" /> Upload Certificate
+            <Plus className="w-4 h-4 text-indigo-400" /> Upload Images
           </h2>
 
           <label

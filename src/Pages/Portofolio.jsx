@@ -15,7 +15,7 @@ import TechStackIcon from "../components/TechStackIcon";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Certificate from "../components/Certificate";
-import { Code, Award, Boxes } from "lucide-react";
+import { Code, Award, Boxes, Book, Camera } from "lucide-react";
 
 
 const ToggleButton = ({ onClick, isShowingMore }) => (
@@ -209,8 +209,7 @@ export default function FullWidthTabs() {
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
-          Explore my journey through projects, certifications, and technical expertise. 
-          Each section represents a milestone in my continuous learning path.
+          Kumpulan dokumen Capaian Pembelajaran, Modul Ajar, dan KKTP yang telah saya susun dan juga Dokumentasi dan laporan kegiatan selama Praktik Pengalaman Lapangan (PPL).
         </p>
       </div>
 
@@ -284,20 +283,16 @@ export default function FullWidthTabs() {
             }}
           >
             <Tab
-              icon={<Code className="mb-2 w-5 h-5 transition-all duration-300" />}
-              label="Projects"
+              icon={<Book className="mb-2 w-5 h-5 transition-all duration-300" />}
+              label="Perangkat Pembelajaran"
               {...a11yProps(0)}
             />
             <Tab
-              icon={<Award className="mb-2 w-5 h-5 transition-all duration-300" />}
-              label="Certificates"
+              icon={<Camera className="mb-2 w-5 h-5 transition-all duration-300" />}
+              label="Jurnal PPL"
               {...a11yProps(1)}
             />
-            <Tab
-              icon={<Boxes className="mb-2 w-5 h-5 transition-all duration-300" />}
-              label="Tech Stack"
-              {...a11yProps(2)}
-            />
+            
           </Tabs>
         </AppBar>
 
@@ -316,12 +311,12 @@ export default function FullWidthTabs() {
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
                     <CardProject
-                      Img={project.Img}
-                      Title={project.Title}
-                      Description={project.Description}
-                      Link={project.Link}
-                      id={project.id}
-                    />
+  Img={project.img}         // Gunakan .img (huruf kecil)
+  Title={project.title}     // Gunakan .title (huruf kecil)
+  Description={project.description} // Gunakan .description (huruf kecil)
+  Link={project.link}       // Gunakan .link (huruf kecil)
+  id={project.id}
+/>
                   </div>
                 ))}
               </div>
@@ -345,7 +340,7 @@ export default function FullWidthTabs() {
                     data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
-                    <Certificate ImgSertif={certificate.Img} />
+                    <Certificate ImgSertif={certificate.img} />
                   </div>
                 ))}
               </div>

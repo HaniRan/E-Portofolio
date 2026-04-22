@@ -56,11 +56,13 @@ const Certificate = ({ ImgSertif }) => {
 						},
 					}}>
 					<img
-						className="certificate-image"
-						src={ImgSertif}
-						alt="Certificate"
-						style={{
-							width: "100%",
+    className="certificate-image"
+    src={ImgSertif} // Pastikan saat memanggil komponen ini, props yang dikirim adalah huruf kecil
+    alt="Certificate"
+    style={{
+        width: "100%",
+        
+
 							height: "auto",
 							display: "block",
 							objectFit: "cover",
@@ -114,7 +116,7 @@ const Certificate = ({ ImgSertif }) => {
 								fontWeight: 600,
 								textShadow: "0 2px 4px rgba(0,0,0,0.3)",
 							}}>
-							View Certificate
+							Lihat Gambar
 						</Typography>
 					</Box>
 				</Box>
@@ -180,7 +182,7 @@ const Certificate = ({ ImgSertif }) => {
 					{/* Modal Image */}
 					<img
 						src={ImgSertif}
-						alt="Certificate Full View"
+    alt="Certificate Full View"
 						style={{
 							display: "block",
 							maxWidth: "100%",
