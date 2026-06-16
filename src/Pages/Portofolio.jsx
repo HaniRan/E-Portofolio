@@ -117,7 +117,115 @@ const techStacks = [
   { icon: "vercel.svg", language: "Vercel" },
   { icon: "SweetAlert.svg", language: "SweetAlert2" },
 ];
+// Data Artefak Pembelajaran per Siklus
+const artefakSiklus = {
+  1: [
+    {
+      judul: "Modul Ajar Siklus 1",
+      deskripsi: "Modul ajar berbasis Project-Based Learning untuk materi Dasar Jaringan Komputer.",
+      link: "https://drive.google.com/your-link-siklus1-modul", // Ganti dengan link Drive kamu
+      tipe: "Modul Ajar",
+    },
+    {
+      judul: "Capaian Pembelajaran (CP) Siklus 1",
+      deskripsi: "Dokumen Capaian Pembelajaran yang disusun sesuai kurikulum Merdeka.",
+      link: "https://drive.google.com/your-link-siklus1-cp",
+      tipe: "CP & ATP",
+    },
+    {
+      judul: "KKTP Siklus 1",
+      deskripsi: "Kriteria Ketercapaian Tujuan Pembelajaran untuk mengukur kompetensi siswa.",
+      link: "https://drive.google.com/your-link-siklus1-kktp",
+      tipe: "KKTP",
+    },
+  ],
+  2: [
+    {
+      judul: "Modul Ajar Siklus 2",
+      deskripsi: "Modul ajar dengan pendekatan diferensiasi untuk materi Konfigurasi Jaringan.",
+      link: "https://drive.google.com/your-link-siklus2-modul",
+      tipe: "Modul Ajar",
+    },
+    {
+      judul: "Hasil Asesmen Siklus 2",
+      deskripsi: "Dokumen hasil asesmen formatif dan sumatif pada siklus pembelajaran kedua.",
+      link: "https://drive.google.com/your-link-siklus2-asesmen",
+      tipe: "Asesmen",
+    },
+    {
+      judul: "Refleksi Pembelajaran Siklus 2",
+      deskripsi: "Catatan refleksi dan evaluasi diri setelah pelaksanaan pembelajaran siklus 2.",
+      link: "https://drive.google.com/your-link-siklus2-refleksi",
+      tipe: "Refleksi",
+    },
+  ],
+  3: [
+    {
+      judul: "Modul Ajar Siklus 3",
+      deskripsi: "Modul ajar final dengan integrasi teknologi simulasi Cisco Packet Tracer.",
+      link: "https://drive.google.com/your-link-siklus3-modul",
+      tipe: "Modul Ajar",
+    },
+    {
+      judul: "Video Pembelajaran Siklus 3",
+      deskripsi: "Dokumentasi video proses pembelajaran dan presentasi proyek siswa.",
+      link: "https://drive.google.com/your-link-siklus3-video",
+      tipe: "Video",
+    },
+    {
+      judul: "Laporan Akhir PPL Siklus 3",
+      deskripsi: "Laporan komprehensif hasil keseluruhan pelaksanaan PPL dari siklus 1 sampai 3.",
+      link: "https://drive.google.com/your-link-siklus3-laporan",
+      tipe: "Laporan",
+    },
+  ],
+};
 
+// Komponen Kartu Artefak
+const ArtefakCard = ({ judul, deskripsi, link, tipe }) => (
+  <div
+    className="bg-[#0a0a1a]/60 border border-white/5 rounded-2xl p-6 flex flex-col gap-3 hover:border-indigo-500/30 transition-all duration-300 group"
+    data-aos="fade-up"
+  >
+    <span className="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full w-fit">
+      {tipe}
+    </span>
+    <h3 className="text-white font-semibold text-base group-hover:text-indigo-300 transition-colors">
+      {judul}
+    </h3>
+    <p className="text-gray-400 text-sm leading-relaxed flex-1">{deskripsi}</p>
+    
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-2 inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-white font-medium transition-colors"
+    >
+      Lihat Dokumen
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </a>
+  </div>
+);
+
+// Komponen Panel Siklus
+const SiklusPanel = ({ siklusNum }) => (
+  <div className="space-y-6 py-4">
+    <div className="text-center" data-aos="fade-up">
+      <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+        Artefak Pembelajaran Siklus {siklusNum}
+      </h3>
+      <p className="text-gray-400 text-sm mt-1">
+        Kumpulan dokumen dan hasil karya pada siklus pembelajaran ke-{siklusNum}
+      </p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {artefakSiklus[siklusNum].map((item, idx) => (
+        <ArtefakCard key={idx} {...item} />
+      ))}
+    </div>
+  </div>
+);
 export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = useState(0);
