@@ -433,6 +433,7 @@ export default function FullWidthTabs() {
                     data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
+                    
                     <CardProject
   Img={project.img}         // Gunakan .img (huruf kecil)
   Title={project.title}     // Gunakan .title (huruf kecil)
@@ -463,6 +464,17 @@ export default function FullWidthTabs() {
                     data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
+                    <TabPanel value={value} index={2} dir={theme.direction}>
+            <SiklusPanel siklusNum={1} />
+          </TabPanel>
+
+          <TabPanel value={value} index={3} dir={theme.direction}>
+            <SiklusPanel siklusNum={2} />
+          </TabPanel>
+
+          <TabPanel value={value} index={4} dir={theme.direction}>
+            <SiklusPanel siklusNum={3} />
+          </TabPanel>
                     <Certificate ImgSertif={certificate.img} />
                   </div>
                 ))}
@@ -478,21 +490,7 @@ export default function FullWidthTabs() {
             )}
           </TabPanel>
 
-          <TabPanel value={value} index={2} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
-                {techStacks.map((stack, index) => (
-                  <div
-                    key={index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
-                  >
-                    <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </TabPanel>
+          
         </SwipeableViews>
       </Box>
     </div>
