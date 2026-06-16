@@ -100,6 +100,44 @@ const AboutPage = () => {
         </div>
       </div>
 
+     
+<div className="mt-10 space-y-4" data-aos="fade-up">
+  <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+    <Heart className="w-5 h-5 text-indigo-400" />
+    Pembimbing PPG & PPL
+  </h3>
+  <p className="text-gray-400 text-sm leading-relaxed">
+    Terima kasih atas bimbingan, arahan, dan dukungan yang telah diberikan selama proses PPG dan PPL berlangsung.
+  </p>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+    
+    {/* Dosen Pembimbing Lapangan */}
+    <div className="bg-[#0a0a1a]/50 backdrop-blur-sm border border-white/5 rounded-2xl p-5 flex items-center gap-4 group hover:border-indigo-500/30 transition-all duration-300">
+      <div className="p-3 rounded-xl bg-indigo-500/10 group-hover:scale-110 transition-transform shrink-0">
+        <GraduationCap className="w-7 h-7 text-indigo-400" />
+      </div>
+      <div>
+        <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-1">Dosen Pembimbing (DPL)</p>
+        <p className="text-white font-semibold text-sm">Dr. Fatahullah, S.Pd., M.Eng.</p>
+        <p className="text-gray-500 text-xs mt-0.5">Universitas Negeri Makassar</p>
+      </div>
+    </div>
+
+    {/* Guru Pamong */}
+    <div className="bg-[#0a0a1a]/50 backdrop-blur-sm border border-white/5 rounded-2xl p-5 flex items-center gap-4 group hover:border-purple-500/30 transition-all duration-300">
+      <div className="p-3 rounded-xl bg-purple-500/10 group-hover:scale-110 transition-transform shrink-0">
+        <Target className="w-7 h-7 text-purple-400" />
+      </div>
+      <div>
+        <p className="text-xs font-bold uppercase tracking-widest text-purple-400 mb-1">Guru Pamong</p>
+        <p className="text-white font-semibold text-sm">Muh Takbir, S.Pd., MM.</p>
+        <p className="text-gray-500 text-xs mt-0.5">SMK Negeri 10 Makassar</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
       {/* --- BAGIAN 2: REFLEKSI AKHIR PPL (TUGAS E-PORTFOLIO 1) --- */}
       <section className="mt-32 space-y-12" data-aos="fade-up">
         <div className="text-center">
