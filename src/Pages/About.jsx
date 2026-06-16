@@ -36,14 +36,18 @@ const AboutPage = () => {
             </p>
           </div>
 
+        
           {/* Grid Kartu Kecil */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <InfoCard icon={IdCard} label="NIM" value="2590544951279" animation="fade-right" />
             <InfoCard icon={Book} label="Bidang Studi" value="Teknik Jaringan Komputer & Telekomunikasi" animation="fade-left" />
             <InfoCard icon={Building2} label="LPTK" value="Universitas Negeri Makassar" animation="fade-right" />
             <InfoCard icon={Building} label="Sekolah Mitra" value="SMK NEGERI 10 MAKASSAR" animation="fade-left" />
+            <InfoCard icon={MapPin} label="Asal Daerah" value="Makassar, Sulawesi Selatan" animation="fade-right" />
+            <InfoCard icon={GraduationCap} label="Gelombang PPG" value="PPG Calon Guru Gelombang 1 Tahun 2026" animation="fade-left" />
           </div>
-        </div>
+
+        
 
         {/* KOLOM KANAN: Biodata Pribadi */}
         <div className="space-y-6" data-aos="fade-left">
