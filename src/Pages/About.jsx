@@ -46,6 +46,7 @@ const AboutPage = () => {
             <InfoCard icon={MapPin} label="Asal Daerah" value="Makassar, Sulawesi Selatan" animation="fade-right" />
             <InfoCard icon={GraduationCap} label="Gelombang PPG" value="PPG Calon Guru Gelombang 1 Tahun 2026" animation="fade-left" />
           </div>
+        </div>
 
         
 
