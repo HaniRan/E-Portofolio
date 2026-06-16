@@ -15,7 +15,7 @@ import TechStackIcon from "../components/TechStackIcon";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Certificate from "../components/Certificate";
-import { Code, Award, Boxes, Book, Camera } from "lucide-react";
+import { Code, Award, Boxes, Book, Camera, Sparkles } from "lucide-react";
 
 
 const ToggleButton = ({ onClick, isShowingMore }) => (
@@ -399,6 +399,21 @@ export default function FullWidthTabs() {
               icon={<Camera className="mb-2 w-5 h-5 transition-all duration-300" />}
               label="Jurnal PPL"
               {...a11yProps(1)}
+            />
+            <Tab
+              icon={<Sparkles className="mb-2 w-5 h-5 transition-all duration-300" />}
+              label="Artefak Siklus 1"
+              {...a11yProps(2)}
+            />
+            <Tab
+              icon={<Sparkles className="mb-2 w-5 h-5 transition-all duration-300" />}
+              label="Artefak Siklus 2"
+              {...a11yProps(3)}
+            />
+            <Tab
+              icon={<Sparkles className="mb-2 w-5 h-5 transition-all duration-300" />}
+              label="Artefak Siklus 3"
+              {...a11yProps(4)}
             />
             
           </Tabs>
