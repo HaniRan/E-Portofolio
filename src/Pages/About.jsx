@@ -219,7 +219,7 @@ const AboutPage = () => {
           {/* 4. Lampiran Penilaian */}
           <div className="lg:col-span-2 flex justify-center pt-2">
             <a 
-              href="https://drive.google.com" 
+              href="https://drive.google.com/drive/folders/1v9LJ3OpeCmc63O5Kx1nZAuHdO-6_gZh6?usp=drive_link" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group relative px-8 py-4 bg-[#030014] rounded-full overflow-hidden border border-white/10"
