@@ -95,7 +95,9 @@ const AboutPage = () => {
           </div>
 
           <div className="relative bg-gradient-to-r from-[#6366f1]/10 to-transparent border-l-4 border-[#6366f1] p-4 italic text-sm text-gray-300">
-            "In technology, we build systems. In education, we build futures."
+            ""Menjadi seorang pendidik bukan sekadar memilih profesi, ini adalah memilih panggilan. Setiap hari kita berdiri di depan kelas bukan hanya untuk mengajar materi, tetapi untuk menyalakan api keingintahuan, membentuk karakter, dan menanam benih harapan di hati generasi yang akan memimpin dunia esok hari. Guru bukan hanya penyampai ilmu, guru adalah jembatan antara mimpi seorang anak dan kenyataan yang bisa ia raih."
+
+"
           </div>
         </div>
       </div>
@@ -118,7 +120,7 @@ const AboutPage = () => {
       </div>
       <div>
         <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-1">Dosen Pembimbing (DPL)</p>
-        <p className="text-white font-semibold text-sm">Dr. Fatahullah, S.Pd., M.Eng.</p>
+        <p className="text-white font-semibold text-sm">Dr. Fatahillah, S.Pd., M.Eng.</p>
         <p className="text-gray-500 text-xs mt-0.5">Universitas Negeri Makassar</p>
       </div>
     </div>
