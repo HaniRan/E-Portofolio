@@ -139,83 +139,162 @@ const AboutPage = () => {
 
   </div>
 </div>
+{/* --- BAGIAN 2: REFLEKSI AKHIR PPL (TUGAS E-PORTFOLIO 1) --- */}
+  <section className="mt-32 space-y-12" data-aos="fade-up">
+    <div className="text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+        Refleksi Akhir PPL Terbimbing
+      </h2>
+      <p className="text-gray-400 mt-2 flex items-center justify-center gap-2">
+        <GraduationCap className="w-5 h-5 text-indigo-400" />
+        Fondasi Dasar Karakter Guru Profesional
+      </p>
+    </div>
 
-      {/* --- BAGIAN 2: REFLEKSI AKHIR PPL (TUGAS E-PORTFOLIO 1) --- */}
-      <section className="mt-32 space-y-12" data-aos="fade-up">
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
-            Refleksi Akhir PPL Terbimbing
-          </h2>
-          <p className="text-gray-400 mt-2 flex items-center justify-center gap-2">
-            <GraduationCap className="w-5 h-5 text-indigo-400" />
-            Fondasi Dasar Karakter Guru Profesional
-          </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      {/* --- LK 1: IDENTIFIKASI DIRI (Disisipkan di bawah Header) --- */}
+      <div className="lg:col-span-2 bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
+        <h3 className="text-xl font-semibold mb-6 flex items-center gap-3 text-white">
+          <BookOpen className="w-5 h-5 text-indigo-400" /> LK 1: Identifikasi Diri
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm sm:text-base">
+          {/* Visi Pendidikan */}
+          <div className="space-y-3 bg-white/5 p-5 rounded-2xl border border-white/5">
+            <h4 className="text-indigo-300 font-bold uppercase text-xs tracking-widest">Visi Pendidikan Indonesia</h4>
+            <ul className="text-gray-400 list-disc ml-4 space-y-2">
+              <li>Mewujudkan ekosistem vokasi yang inklusif dan adaptif terhadap teknologi digital.</li>
+              <li>Mencetak generasi pembelajar kompeten teknis dan berkarakter industri masa depan.</li>
+            </ul>
+          </div>
+          {/* Visi Calon Guru */}
+          <div className="space-y-3 bg-white/5 p-5 rounded-2xl border border-white/5">
+            <h4 className="text-indigo-300 font-bold uppercase text-xs tracking-widest">Visi Sebagai Calon Guru</h4>
+            <ul className="text-gray-400 list-disc ml-4 space-y-2">
+              <li>Fasilitator yang menjembatani teori kelas dan praktik industri (IT/RPL).</li>
+              <li>Membangun lingkungan belajar yang berpusat pada *problem-solving* dan pemikiran kritis.</li>
+            </ul>
+          </div>
+          {/* Langkah Konkret */}
+          <div className="space-y-3 bg-white/5 p-5 rounded-2xl border border-white/5">
+            <h4 className="text-indigo-300 font-bold uppercase text-xs tracking-widest">Langkah Konkret</h4>
+            <ul className="text-gray-400 list-disc ml-4 space-y-2">
+              <li>Menerapkan *Project-Based Learning* (PjBL) berbasis studi kasus industri nyata.</li>
+              <li>Aktif dalam pengembangan diri berkelanjutan melalui eksplorasi pedagogi kejuruan.</li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
-          {/* 1. Profil & Inspirasi */}
-          <div className="bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
-            <h3 className="text-xl font-semibold mb-4 flex items-center gap-3 text-white">
-              <MapPin className="w-5 h-5 text-indigo-400" /> Profil & Inspirasi
-            </h3>
-            <p className="text-gray-400 leading-relaxed text-justify text-sm sm:text-base">
-              Saya berasal dari <span className="text-white font-medium">Makassar</span>, kota Daeng yang kental dengan filosofi <i>"Siri' na Pacce"</i>—menjaga harga diri dan empati. Karakter ini mendasari dedikasi saya untuk menjadi guru yang tegas namun tetap humanis. 
-              <br /><br />
-              Inspirasi saya muncul dari keinginan menjembatani celah teknologi di SMK. Tujuan saya adalah menjadi pendidik profesional yang tidak hanya mentransfer <i>hard-skill</i> TJKT, tapi juga membimbing karakter siswa di era digital.
+      {/* 1. Profil & Inspirasi */}
+      <div className="bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
+        <h3 className="text-xl font-semibold mb-4 flex items-center gap-3 text-white">
+          <MapPin className="w-5 h-5 text-indigo-400" /> Profil & Inspirasi
+        </h3>
+        <p className="text-gray-400 leading-relaxed text-justify text-sm sm:text-base">
+          Saya berasal dari <span className="text-white font-medium">Makassar</span>, kota Daeng yang kental dengan filosofi <i>"Siri' na Pacce"</i>—menjaga harga diri dan empati. Karakter ini mendasari dedikasi saya untuk menjadi guru yang tegas namun tetap humanis. 
+          <br /><br />
+          Inspirasi saya muncul dari keinginan menjembatani celah teknologi di SMK. Tujuan saya adalah menjadi pendidik profesional yang tidak hanya mentransfer <i>hard-skill</i> TJKT, tapi juga membimbing karakter siswa di era digital.
+        </p>
+      </div>
+
+      {/* 2. Model Guru yang Dituju */}
+      <div className="bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
+        <h3 className="text-xl font-semibold mb-4 flex items-center gap-3 text-white">
+          <Target className="w-5 h-5 text-indigo-400" /> Model Guru Masa Depan
+        </h3>
+        <div className="space-y-4 text-sm sm:text-base">
+          <div>
+            <h4 className="text-indigo-300 font-bold uppercase text-xs tracking-widest mb-1">Misi Utama</h4>
+            <p className="text-gray-400 italic">"Mewujudkan pembelajaran TJKT yang adaptif dan inklusif bagi semua murid."</p>
+          </div>
+          <div>
+            <h4 className="text-indigo-300 font-bold uppercase text-xs tracking-widest mb-1">Kompetensi & Karakter</h4>
+            <ul className="text-gray-400 list-disc ml-5 space-y-1">
+              <li>Mastery dalam integrasi AI dan simulasi jaringan.</li>
+              <li>Komunikator yang empatik melalui diferensiasi instruksional.</li>
+              <li>Integritas tinggi sebagai pembelajar sepanjang hayat.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. Analisis Artefak Pembelajaran */}
+      <div className="lg:col-span-2 bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
+        <h3 className="text-xl font-semibold mb-6 flex items-center gap-3 text-white">
+          <Sparkles className="w-5 h-5 text-indigo-400" /> Analisis Artefak Pembelajaran
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm sm:text-base text-justify">
+          <div className="space-y-4">
+            <div>
+              <p className="text-white font-medium flex items-center gap-2">Kendala Proses</p>
+              <p className="text-gray-400 mt-1">Tantangan terbesar adalah menyederhanakan konsep infrastruktur jaringan yang abstrak agar relevan dengan minat siswa yang beragam.</p>
+            </div>
+            <div>
+              <p className="text-white font-medium flex items-center gap-2">Konsep Pedagogi</p>
+              <p className="text-gray-400 mt-1">Menggunakan pendekatan <i>Understanding by Design (UbD)</i> untuk memastikan materi tersampaikan secara terstruktur dan bermakna.</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div>
+              <p className="text-white font-medium flex items-center gap-2">Faktor Keberhasilan</p>
+              <p className="text-gray-400 mt-1">Implementasi simulasi interaktif Cisco Packet Tracer terbukti meningkatkan keterlibatan siswa secara signifikan.</p>
+            </div>
+            <div>
+              <p className="text-white font-medium flex items-center gap-2">Adaptasi & Perubahan</p>
+              <p className="text-gray-400 mt-1">Modifikasi konten dilakukan pada bagian instruksi praktikum agar lebih ramah bagi siswa dengan gaya belajar auditori.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* --- LK 2: REFLEKSI PENGALAMAN BELAJAR (Disisipkan di bawah Analisis Artefak) --- */}
+      <div className="lg:col-span-2 bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
+        <h3 className="text-xl font-semibold mb-6 flex items-center gap-3 text-white">
+          <Activity className="w-5 h-5 text-indigo-400" /> LK 2: Refleksi Pengalaman Belajar (4C)
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm sm:text-base">
+          {/* Connection */}
+          <div className="bg-white/5 p-5 rounded-2xl border-l-4 border-l-blue-500">
+            <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+              Connection
+            </h4>
+            <p className="text-gray-400 text-justify">
+              Materi filosofi pendidikan dan desain instruksional sangat krusial bagi peran saya. Hal ini menyadarkan saya bahwa mengelola keragaman karakter dan emosi siswa di lab komputer sama pentingnya dengan mengajarkan logika pemrograman.
             </p>
           </div>
-
-          {/* 2. Model Guru yang Dituju */}
-          <div className="bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
-            <h3 className="text-xl font-semibold mb-4 flex items-center gap-3 text-white">
-              <Target className="w-5 h-5 text-indigo-400" /> Model Guru Masa Depan
-            </h3>
-            <div className="space-y-4 text-sm sm:text-base">
-              <div>
-                <h4 className="text-indigo-300 font-bold uppercase text-xs tracking-widest mb-1">Misi Utama</h4>
-                <p className="text-gray-400 italic">"Mewujudkan pembelajaran TJKT yang adaptif dan inklusif bagi semua murid."</p>
-              </div>
-              <div>
-                <h4 className="text-indigo-300 font-bold uppercase text-xs tracking-widest mb-1">Kompetensi & Karakter</h4>
-                <ul className="text-gray-400 list-disc ml-5 space-y-1">
-                  <li>Mastery dalam integrasi AI dan simulasi jaringan.</li>
-                  <li>Komunikator yang empatik melalui diferensiasi instruksional.</li>
-                  <li>Integritas tinggi sebagai pembelajar sepanjang hayat.</li>
-                </ul>
-              </div>
-            </div>
+          {/* Challenge */}
+          <div className="bg-white/5 p-5 rounded-2xl border-l-4 border-l-red-500">
+            <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+              Challenge
+            </h4>
+            <p className="text-gray-400 text-justify">
+              Tantangan utamanya adalah beranjak dari praktik lama yang hanya mengejar target penyelesaian produk perangkat lunak, menjadi ekosistem belajar yang inklusif, humanis, dan responsif terhadap <i>culture shock</i> siswa.
+            </p>
           </div>
-
-          {/* 3. Analisis Artefak Pembelajaran */}
-          <div className="lg:col-span-2 bg-[#0a0a1a]/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm group hover:border-indigo-500/20 transition-all">
-            <h3 className="text-xl font-semibold mb-6 flex items-center gap-3 text-white">
-              <Sparkles className="w-5 h-5 text-indigo-400" /> Analisis Artefak Pembelajaran
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm sm:text-base text-justify">
-              <div className="space-y-4">
-                <div>
-                  <p className="text-white font-medium flex items-center gap-2">Kendala Proses</p>
-                  <p className="text-gray-400 mt-1">Tantangan terbesar adalah menyederhanakan konsep infrastruktur jaringan yang abstrak agar relevan dengan minat siswa yang beragam.</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium flex items-center gap-2">Konsep Pedagogi</p>
-                  <p className="text-gray-400 mt-1">Menggunakan pendekatan <i>Understanding by Design (UbD)</i> untuk memastikan materi tersampaikan secara terstruktur dan bermakna.</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <p className="text-white font-medium flex items-center gap-2">Faktor Keberhasilan</p>
-                  <p className="text-gray-400 mt-1">Implementasi simulasi interaktif Cisco Packet Tracer terbukti meningkatkan keterlibatan siswa secara signifikan.</p>
-                </div>
-                <div>
-                  <p className="text-white font-medium flex items-center gap-2">Adaptasi & Perubahan</p>
-                  <p className="text-gray-400 mt-1">Modifikasi konten dilakukan pada bagian instruksi praktikum agar lebih ramah bagi siswa dengan gaya belajar auditori.</p>
-                </div>
-              </div>
-            </div>
+          {/* Concept */}
+          <div className="bg-white/5 p-5 rounded-2xl border-l-4 border-l-green-500">
+            <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+              Concept
+            </h4>
+            <p className="text-gray-400 text-justify">
+              Konsep esensial yang diterapkan mencakup Filosofi KHD (menyelaraskan kodrat alam dan zaman), <i>Understanding by Design</i> (UbD) untuk perencanaan terstruktur, dan penanaman Profil Pelajar Pancasila dalam kolaborasi tim.
+            </p>
           </div>
+          {/* Change */}
+          <div className="bg-white/5 p-5 rounded-2xl border-l-4 border-l-purple-500">
+            <h4 className="text-white font-semibold mb-2 flex items-center gap-2">
+              Change
+            </h4>
+            <p className="text-gray-400 text-justify">
+              Saya mengubah orientasi dari pembelajaran berbasis instruktur (*live-coding*) menjadi pendekatan fasilitatif yang berpusat pada murid, membangun komunikasi terbuka, dan memetakan asesmen awal untuk penyesuaian instruksi.
+            </p>
+          </div>
+        </div>
+      </div>
 
+    </div>
+  </section>
           {/* 4. Lampiran Penilaian */}
           <div className="lg:col-span-2 flex justify-center pt-2">
             <a 
